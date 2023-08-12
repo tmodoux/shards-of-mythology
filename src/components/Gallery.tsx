@@ -22,7 +22,7 @@ const Gallery = () => {
           <Button
             shape="circle"
             onClick={() => carouselRef?.current?.prev()}
-            icon={<LeftOutlined style={{ fontSize: "12px" }} />}
+            icon={<LeftOutlined style={{ fontSize: "90%" }} />}
           />
           <Title level={2} style={{ margin: "0.2em" }}>
             {character.name.toUpperCase()}
@@ -30,7 +30,7 @@ const Gallery = () => {
           <Button
             shape="circle"
             onClick={() => carouselRef?.current?.next()}
-            icon={<RightOutlined style={{ fontSize: "12px" }} />}
+            icon={<RightOutlined style={{ fontSize: "90%" }} />}
           />
         </Row>
         <i>{character.title}</i>
@@ -53,7 +53,7 @@ const Gallery = () => {
               >
                 <Text
                   style={{
-                    fontSize: "1vw",
+                    fontSize: "1.7vh",
                     lineHeight: "2",
                   }}
                 >
