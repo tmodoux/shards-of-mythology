@@ -24,7 +24,7 @@ const Gallery = () => {
             onClick={() => carouselRef?.current?.prev()}
             icon={<LeftOutlined style={{ fontSize: "90%" }} />}
           />
-          <Title level={2} style={{ margin: "0.2em" }}>
+          <Title level={3} style={{ margin: "0.2em" }}>
             {character.name.toUpperCase()}
           </Title>
           <Button
@@ -51,14 +51,7 @@ const Gallery = () => {
                   backgroundSize: "cover",
                 }}
               >
-                <Text
-                  style={{
-                    fontSize: "1.7vh",
-                    lineHeight: "2",
-                  }}
-                >
-                  {character.text}
-                </Text>
+                <Text>{character.text}</Text>
               </div>
             </div>
           </div>

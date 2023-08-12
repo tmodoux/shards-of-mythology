@@ -24,8 +24,10 @@
 .flip-container,
 .front,
 .back {
-  width: 24vw;
-  height: 75vh;
+  width: 460px;
+  height: 690px;
+  max-width: 90vw;
+  max-height: 75vh;
   margin: 0.2em auto;
 }
 
@@ -84,4 +86,5 @@
 .ant-typography {
   font-family: "Japanwave";
   font-weight: bolder;
+  font-size: medium;
 }
