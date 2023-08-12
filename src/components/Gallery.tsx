@@ -18,7 +18,7 @@ const Gallery = () => {
     return (
       <div>
         <br />
-        <Row justify={"space-around"}>
+        <Row justify={"space-around"} align={"middle"}>
           <Button
             shape="circle"
             onClick={() => carouselRef?.current?.prev()}
@@ -53,7 +53,7 @@ const Gallery = () => {
               >
                 <Text
                   style={{
-                    fontSize: "18px",
+                    fontSize: "1vw",
                     lineHeight: "2",
                   }}
                 >
