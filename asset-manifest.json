@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/shards-of-mythology/static/css/main.51a1697a.css",
-    "main.js": "/shards-of-mythology/static/js/main.9e3f1100.js",
+    "main.css": "/shards-of-mythology/static/css/main.1d7d93f0.css",
+    "main.js": "/shards-of-mythology/static/js/main.d74f093d.js",
     "static/media/Japanwave.ttf": "/shards-of-mythology/static/media/Japanwave.7755983a1d1ab6c40534.ttf",
     "index.html": "/shards-of-mythology/index.html",
-    "main.51a1697a.css.map": "/shards-of-mythology/static/css/main.51a1697a.css.map",
-    "main.9e3f1100.js.map": "/shards-of-mythology/static/js/main.9e3f1100.js.map"
+    "main.1d7d93f0.css.map": "/shards-of-mythology/static/css/main.1d7d93f0.css.map",
+    "main.d74f093d.js.map": "/shards-of-mythology/static/js/main.d74f093d.js.map"
   },
   "entrypoints": [
-    "static/css/main.51a1697a.css",
-    "static/js/main.9e3f1100.js"
+    "static/css/main.1d7d93f0.css",
+    "static/js/main.d74f093d.js"
   ]
 }
