@@ -3,6 +3,7 @@ import { Image } from "antd";
 import characters from "../characters.json";
 import { createRef } from "react";
 import { CarouselRef } from "antd/es/carousel";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 const { Text, Title } = Typography;
 
 type CharacterType = {
@@ -19,17 +20,30 @@ const Gallery = () => {
         <Title level={2} style={{ margin: "0.2em" }}>
           {character.name.toUpperCase()}
         </Title>
-        {character.title}
+        <i>{character.title}</i>
         <div className="flip-container">
           <div className="flipper">
             <div className="front">
               <div className="front-content">
-                <Image src={`images/${character.name}.png`} />
+                <Image preview={false} src={`images/${character.name}.png`} />
               </div>
             </div>
             <div className="back">
-              <div className="back-content">
-                <Text>{character.text}</Text>
+              <div
+                className="back-content"
+                style={{
+                  backgroundImage: "url(images/back.png)",
+                  backgroundSize: "cover",
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: "20px",
+                    lineHeight: "2",
+                  }}
+                >
+                  {character.text}
+                </Text>
               </div>
             </div>
           </div>
@@ -39,16 +53,28 @@ const Gallery = () => {
   };
   return (
     <div>
-      <Row>
-        <Col span={8}>
-          <Button onClick={() => carouselRef?.current?.prev()}>{"<"}</Button>
+      <Row justify="center" align="middle">
+        <Col span={6} />
+        <Col span={2}>
+          <Button
+            shape="circle"
+            onClick={() => carouselRef?.current?.prev()}
+            icon={<LeftOutlined style={{ fontSize: "12px" }} />}
+          />
         </Col>
         <Col span={8}>
-          <Carousel ref={carouselRef}>{characters.map(item)}</Carousel>
+          <Carousel dots={false} ref={carouselRef}>
+            {characters.map(item)}
+          </Carousel>
         </Col>
-        <Col span={8}>
-          <Button onClick={() => carouselRef?.current?.next()}>{">"}</Button>
+        <Col span={2}>
+          <Button
+            shape="circle"
+            onClick={() => carouselRef?.current?.next()}
+            icon={<RightOutlined style={{ fontSize: "12px" }} />}
+          />
         </Col>
+        <Col span={6} />
       </Row>
     </div>
   );

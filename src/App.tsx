@@ -1,11 +1,11 @@
 import Gallery from "./components/Gallery";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Gallery />
     </div>
   );
-}
+};
 
 export default App;
