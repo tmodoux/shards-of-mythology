@@ -24,8 +24,8 @@
 .flip-container,
 .front,
 .back {
-  width: 520px;
-  height: 810px;
+  width: 460px;
+  height: 690px;
   margin: 0.2em auto;
 }
 
@@ -43,7 +43,6 @@
   left: 0;
   color: cornSilk;
   text-align: center;
-  font: 3em/240px "Helvetica Neue", Helvetica, sans-serif;
   box-shadow: -5px 5px 5px #aaa;
 }
 
@@ -55,7 +54,7 @@
 
 .front-content,
 .back-content {
-  height: 92%;
+  height: 96%;
   margin: 2%;
 }
 
@@ -67,11 +66,9 @@
 .back-content {
   display: grid;
   place-items: center;
-  line-height: 100px;
   text-align: justify;
   padding-left: 4%;
   padding-right: 4%;
-  user-select: none;
   background-color: white;
 }
 
