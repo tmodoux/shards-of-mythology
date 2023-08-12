@@ -51,18 +51,18 @@
 .front {
   z-index: 2;
   transform: rotateY(0deg);
-  background: black;
 }
 
 .front-content,
 .back-content {
-  height: 96%;
-  margin: 2%;
+  height: 100%;
+  outline-style: solid;
+  outline-color: black;
+  outline-width: 7px;
 }
 
 .back {
   transform: rotateY(180deg);
-  background: black;
 }
 
 .back-content {

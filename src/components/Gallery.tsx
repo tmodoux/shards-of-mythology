@@ -39,9 +39,14 @@ const Gallery = () => {
         <div className="flip-container">
           <div className="flipper">
             <div className="front">
-              <div className="front-content">
-                <Image preview={false} src={`images/${character.name}.png`} />
-              </div>
+              <div
+                className="front-content"
+                style={{
+                  backgroundImage: `url(images/${character.name}.png)`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
             </div>
             <div className="back">
               <div
@@ -49,6 +54,7 @@ const Gallery = () => {
                 style={{
                   backgroundImage: "url(images/back.png)",
                   backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}
               >
                 <Text>{character.text}</Text>
