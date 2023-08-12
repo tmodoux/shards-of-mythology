@@ -24,8 +24,8 @@
 .flip-container,
 .front,
 .back {
-  width: calc(22vw + 50px);
-  height: calc(34vw + 50px);
+  width: 24vw;
+  height: 36vw;
   margin: 0.2em auto;
 }
 
