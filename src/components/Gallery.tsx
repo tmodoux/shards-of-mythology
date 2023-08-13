@@ -1,6 +1,4 @@
 import { Button, Carousel, Row, Typography } from "antd";
-import { Image } from "antd";
-import characters from "../characters.json";
 import { createRef } from "react";
 import { CarouselRef } from "antd/es/carousel";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
@@ -12,11 +10,16 @@ type CharacterType = {
   title: string;
 };
 
-const Gallery = () => {
+type GalleryPropsType = {
+  collection: string;
+  characters: CharacterType[];
+}
+
+const Gallery = ({ collection, characters }: GalleryPropsType) => {
   let carouselRef = createRef<CarouselRef>();
-  const item = (character: CharacterType) => {
+  const item = (character: CharacterType, id: number) => {
     return (
-      <div>
+      <div key={id}>
         <br />
         <Row justify={"space-around"} align={"middle"}>
           <Button
@@ -42,7 +45,7 @@ const Gallery = () => {
               <div
                 className="front-content"
                 style={{
-                  backgroundImage: `url(images/${character.name}.png)`,
+                  backgroundImage: `url(images/${collection}/${character.name}.png)`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -52,7 +55,7 @@ const Gallery = () => {
               <div
                 className="back-content"
                 style={{
-                  backgroundImage: "url(images/back.png)",
+                  backgroundImage: `url(images/${collection}/back.png)`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
