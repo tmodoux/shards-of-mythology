@@ -75,8 +75,8 @@
 }
 
 .ant-btn:hover {
-  border-color: red !important;
-  color: red !important;
+  border-color: black !important;
+  color: black !important;
 }
 
 .ant-carousel {
@@ -87,4 +87,5 @@
   font-family: "Japanwave";
   font-weight: bolder;
   font-size: medium;
+  user-select: none;
 }

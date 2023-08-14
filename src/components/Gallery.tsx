@@ -5,9 +5,10 @@ import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 const { Text, Title } = Typography;
 
 type CharacterType = {
-  name: string;
+  name?: string;
   text: string;
   title: string;
+  id: string;
 };
 
 type GalleryPropsType = {
@@ -28,7 +29,7 @@ const Gallery = ({ collection, characters }: GalleryPropsType) => {
             icon={<LeftOutlined style={{ fontSize: "90%" }} />}
           />
           <Title level={3} style={{ margin: "0.2em" }}>
-            {character.name.toUpperCase()}
+            {(character.name || character.id).toUpperCase()}
           </Title>
           <Button
             shape="circle"
@@ -45,7 +46,7 @@ const Gallery = ({ collection, characters }: GalleryPropsType) => {
               <div
                 className="front-content"
                 style={{
-                  backgroundImage: `url(images/${collection}/${character.name}.png)`,
+                  backgroundImage: `url(images/${collection}/${character.id || character.name}.png)`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -66,7 +67,7 @@ const Gallery = ({ collection, characters }: GalleryPropsType) => {
           </div>
         </div>
         <br />
-        <br />
+        {id + 1}/{characters.length}
         <br />
         <br />
       </div>
