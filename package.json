@@ -2,6 +2,7 @@
   "name": "shards-of-mythology",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tmodoux.github.io/shards-of-mythology/",
   "dependencies": {
     "@ant-design/icons": "^5.2.5",
     "@types/jest": "^27.5.2",

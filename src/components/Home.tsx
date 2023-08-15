@@ -16,7 +16,7 @@ const Home = ({ collections }: HomePropsType) => {
 
     return <>
         <Title underline>Mythologie</Title>
-        <List dataSource={data} renderItem={(item) => <List.Item style={{ justifyContent: "center" }}>{item}</List.Item>} />
+        <List split={false} dataSource={data} renderItem={(item) => <List.Item style={{ justifyContent: "center" }}>{item}</List.Item>} />
     </>
 };
 
